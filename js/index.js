@@ -62,7 +62,7 @@ audio.onended = function() {
     }
 }
 
-$('.musicBox .play').addEventListener('click', function() {
+$('.musicBox .play ').addEventListener('click', function() {
     if(audio.paused) {
         audio.play()
         console.log('playing')
@@ -76,7 +76,7 @@ $('.musicBox .play').addEventListener('click', function() {
     }
 })
 
-$('.musicBox .forward').addEventListener('click', function() {
+$('.musicBox .forward .fa-step-forward').addEventListener('click', function() {
     currentIndex = ++currentIndex % musicList.length
     // console.log('下一首' + currentIndex)
     loadMusic(musicList[currentIndex])
@@ -89,7 +89,7 @@ $('.musicBox .forward').addEventListener('click', function() {
     
 })
 
-$('.musicBox .back').addEventListener('click', function() {
+$('.musicBox .back .fa-step-backward').addEventListener('click', function() {
     currentIndex = (musicList.length + --currentIndex) % musicList.length
     // console.log('上一首' + currentIndex)
     loadMusic(musicList[currentIndex])
